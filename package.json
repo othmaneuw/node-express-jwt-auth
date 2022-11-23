@@ -10,7 +10,7 @@
     "mongoose": "^5.9.23"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "oth": "nodemon app.js"
   },
   "repository": {
     "type": "git",
