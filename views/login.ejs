@@ -1,5 +1,24 @@
 <%- include('./partials/header') %>
 
-<h1>Login page</h1>
-
+<h2>Log in</h2>
+<form>
+  <label for="email">Email</label>
+  <input type="text" name="email" required />
+  <div class="email error"></div>
+  <label for="password">Password</label>
+  <input type="password" name="password" required />
+  <div class="password error"></div>
+  <button>Log in</button>
+</form>
 <%- include('./partials/footer') %>
+
+<script>
+  const form = document.forms[0];
+  //Grab the values when the form is submitted
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const email = form.email.value;
+    const password = form.password.value;
+    console.log(email, password);
+  });
+</script>
