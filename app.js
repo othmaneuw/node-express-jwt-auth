@@ -29,16 +29,16 @@ app.use(authRoutes);
 app.get('/', (req, res) => res.render('home'));
 app.get('/smoothies', (req, res) => res.render('smoothies'));
 
-app.get('/get-cookie',(req,res)=>{
-    res.cookie('name','Othmane', {httpOnly:true});
-    res.cookie('age','21',{maxAge: 1000*60*60*24 , httpOnly : true});
-    res.send('You got the cookies');
-})
+// app.get('/get-cookie',(req,res)=>{
+//     res.cookie('name','Othmane', {httpOnly:true});
+//     res.cookie('age','21',{maxAge: 1000*60*60*24 , httpOnly : true});
+//     res.send('You got the cookies');
+// })
 
-app.get('/read-cookie',(req,res)=>{
-     res.json(req.cookies);
-})
-// Once the ccokies are added I can access them on any request made through the req object
-app.get('/oth',(req,res)=>{
-  console.log(req.cookies);
-})
+// app.get('/read-cookie',(req,res)=>{
+//      res.json(req.cookies);
+// })
+// // Once the ccokies are added I can access them on any request made through the req object
+// app.get('/oth',(req,res)=>{
+//   console.log(req.cookies);
+// })
