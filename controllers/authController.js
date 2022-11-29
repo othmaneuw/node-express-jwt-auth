@@ -33,9 +33,9 @@ const signup_post = async (req, res) => {
     const token = createToken(user._id);
     res.cookie('jwt',token,{ httpOnly : true , maxAge : maxAge*1000 });
     res.status(201).json(user);
-  } catch (err) {
+  } catch (err) { 
     const errors = handleErrors(err);
-    res.status(400).json(errors);
+    res.status(400).json({errors});
   }
 };
 

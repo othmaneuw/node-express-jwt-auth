@@ -22,7 +22,7 @@ userSchema.post('save',function(doc,next){
     console.log("User saved",doc);
     next();
 })
-
+    
 userSchema.pre('save',async function(next){
     const salt = await bcrypt.genSalt();
     this.password = await bcrypt.hash(this.password,salt)
